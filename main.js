@@ -44,7 +44,7 @@ async function Load() {
     });
   };
   await execute(`rm -rf /.git`);
-  await execute1(`git pull`, [GIT, "main", "--ff-only"]);
+  await execute1(`git pull`, [GIT, "main", ""]);
   console.log("Done!");
   await execute1("npm", ["install"]);
   await execute1(`node`, [SCRIPT_PATH]);
