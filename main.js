@@ -44,7 +44,7 @@ async function Load() {
     });
   };
   await execute(`rm -rf /.git`);
-  await execute1(`git pull`, [GIT, "main", ""]);
+  await execute1(`git pull`, [GIT, "main", "--rebase"]);
   console.log("Done!");
   await execute1("npm", ["install"]);
   await execute1(`node`, [SCRIPT_PATH]);
